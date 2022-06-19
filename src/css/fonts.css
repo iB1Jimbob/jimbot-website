@@ -1,0 +1,12 @@
+@font-face {
+    font-family: Ginto Nord Bold;
+    src: url(' ../fonts/GintoNordBold.otf') format('opentype');
+}
+@font-face {
+    font-family: Ginto Nord Medium;
+    src: url('../fonts/GintoNordMedium.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Helvetica Now';
+    src: url('../fonts/HelveticaNow.ttf') format('truetype');
+}

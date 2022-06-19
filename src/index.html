@@ -1,36 +1,82 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>JimBOT</title>
-        <link rel="stylesheet" href="./assets/style.css">
-        <link rel="shortcut icon" href="./assets/images/jcircle.png">
-        <meta charset="utf8">
-        <script src="./assets/script.js"></script>
+        <title>JimBOT | Home</title>
+        <!--Meta tags-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--CSS files-->
+        <link rel="stylesheet" href="./css/style.css" type="text/css">
+        <link rel="stylesheet" href="./css/reveal.css" type="text/css">
+        <!--JS files-->
+        <script src="js/script.js" type="text/javascript" defer></script>
+        <!--Favicon-->
+        <link rel="shortcut icon" href="images/logo.svg" type="image/svg">
     </head>
     <body>
-        <div id="navbar">
-            <ul>
-                <li><a href="./invite/index.html" target="_blank">Invite</a></li>
-                <li><a href="./vote/index.html">Vote</a></li>
-                <li><a href="./server/index.html" target="_blank">Discord server</a></li>
-                <li><a href="./staff/index.html">Staff</a></li>
-                <li><a href="https://docs.jimbot.xyz" target="_blank">Docs</a></li>
-              </ul>
-        </div>
-        <div id="start">
+        <ul class="navbar">
+            <li><a href="#about">About</a></li>
+            <li><a href="#commands">Commands</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Docs</a></li>
+            <li><a href="https://github.com/iB1Jimbob/jimbot" target="_blank">Source code</a></li>
+        </ul>
+        <div class="start">
             <h1>JimBOT</h1>
-            <h2>Economy - Moderation - Fun</h2>
-            <p id="btns">
+            <h2>A multi purpose Discord bot</h2>
+            <div class="buttons">
                 <a href="./invite/index.html" target="_blank">Invite</a>
                 <a href="./vote/index.html">Vote</a>
-                <a href="./server/index.html" target="_blank">Discord server</a>
-            </p>
-        </div>
-        <div id="features">
-            <div class="feature">
-                <h1>Welp...</h1>
-                <h2>Seems to be pretty empty here... JimBOT isn't quite ready! Make sure to come back later.</h2>
+                <a href="./server/index.html" target="_blank">Server</a>
             </div>
         </div>
+        <div class="stats">
+            <div class="stat">
+                <h1>Servers:</h1>
+                <h2 class="serverCount">0</h2>
+            </div>
+            <div class="stat">
+                <h1>Channels:</h1>
+                <h2 class="channelCount">0</h2>
+            </div>
+            <div class="stat">
+                <h1>Users:</h1>
+                <h2 class="userCount">0</h2>
+            </div>
+        </div>
+        <div id="about">
+            <div class="content hidden">
+                <h1>About JimBOT</h1>
+                <p>JimBOT is a multi purpose Discord bot built as a free time project. It features economy, fun, gambling, meme, moderation and other utility commands.<br>JimBOT is open source, so its source code is hosted publicly on <a href="https://github.com/iB1Jimbob/jimbot" target="_blank">GitHub</a> for everyone to view.<br><b>JimBOT might not be in active development all the time, there are some updates though from time to time.</b></p>
+            </div>
+        </div>
+        <div id="commands">
+            <div class="content hidden">
+                <h1>Commands</h1>
+                <div class="commands"></div>
+            </div>
+        </div>
+        <div id="contact">
+            <div class="content hidden">
+                <h1>Contact</h1>
+                <input type="text" placeholder="Your name" id="name">
+                <input type="text" placeholder="Your E-mail" id="email">
+                <textarea placeholder="Your message" id="message"></textarea>
+                <p class="feedback"></p>
+                <button type="button">Submit</button>
+            </div>
+        </div>
+        <div id="footer">
+            <p>&copy; 2022 <a href="https://jimii.xyz" target="_blank">Jimi</a></p>
+        </div>
+        <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+        <script>
+            kofiWidgetOverlay.draw('j1mii', {
+                'type': 'floating-chat',
+                'floating-chat.donateButton.text': 'Donate',
+                'floating-chat.donateButton.background-color': '#00b9fe',
+                'floating-chat.donateButton.text-color': '#fff'
+            });
+        </script>
     </body>
 </html>

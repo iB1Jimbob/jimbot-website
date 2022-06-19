@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Ubuntu&family=Ubuntu+Mono&display=swap');
+@import url('./fonts.css');
+
+:root {
+    --primary1: #2C2F33;
+    --blurple: #5865F2;
+    --old-blurple: #7289DA;
+    --background-white: snow;
+    --red: #EF233C;
+    --hyperlink: #0000EE;
+    --highlight: #EB459E;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url('../images/background.png');
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+a[href^="https://"] {
+    color: var(--hyperlink);
+}
+
+::selection {
+    background: var(--highlight);
+}
+::-moz-selection {
+    background: var(--highlight);
+}
+
+details {
+    cursor: pointer;
+}
+
+.no-select {
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Navbar */
+
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--blurple);
+    border-radius: 5px;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar li a:hover {
+    background-color: var(--old-blurple);
+}
+
+/* Start */
+
+.start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: fit-content;
+    margin: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+    border-radius: 50px;
+}
+
+.start h1 {
+    font-family: 'Ginto Nord Bold', sans-serif;
+    color: white;
+    font-size: 6em;
+    margin-bottom: 0;
+}
+
+.start h2 {
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    font-size: 2em;
+    margin-top: 0;
+}
+
+.start .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.start .buttons a {
+    border: solid 3px white;
+    font-size: 2em;
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
+    margin: .5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    color: white;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.start .buttons a:hover {
+    border-color: var(--red);
+    color: var(--red);
+}
+
+/* Stats */
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: auto;
+}
+
+.stats .stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 10ch;
+    background-color: var(--blurple);
+    border-radius: 10px;
+    padding-top: 1em;
+    padding-bottom: .4em;
+    padding-left: 2em;
+    padding-right: 2em;
+    color: white;
+    margin: 1em;
+}
+
+.stats .stat h1 {
+    font-family: 'Helvetica Now', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 0;
+}
+
+.stats .stat h2 {
+    font-family: 'Ginto Nord Medium', sans-serif;
+    font-size: 2em;
+}
+
+/* About */
+
+#about {
+    background-color: var(--background-white);
+    margin-top: 1%;
+    margin-bottom: 0;
+}
+
+#about .content {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: start;
+    margin: auto;
+    padding: 2rem;
+    border-bottom: 5px dotted black;
+}
+
+#about .content h1 {
+    font-family: 'Ginto Nord Medium', sans-serif;
+    font-size: 3em;
+}
+
+#about .content p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5em;
+}
+
+/* Commands */
+
+#commands {
+    background-color: var(--background-white);
+}
+
+#commands .content {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: start;
+    margin: auto;
+    padding: 2rem;
+    border-bottom: 5px dotted black;
+}
+
+#commands .content h1 {
+    font-family: 'Ginto Nord Medium', sans-serif;
+    font-size: 3em;
+}
+
+#commands .content .commands details {
+    font-size: 1.3em;
+    margin: 10px;
+}
+
+#commands .content .commands details summary {
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: capitalize;
+}
+
+#commands .content .commands p {
+    cursor: text;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#commands .content .commands .description {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: italic;
+}
+
+
+#commands .content .commands .usage {
+    font-family: 'Ubuntu Mono', monospace;
+    background-color: var(--primary1);
+    padding: .5em;
+    border-radius: 5px;
+}
+
+#commands .content .commands .usage .req {
+    color: #ff0000;
+}
+
+#commands .content .commands .usage .opt {
+    color: #6358ff;
+}
+
+#commands .content .commands .usage .cmd {
+    color: #00c200;
+}
+
+#commands .content .commands .aliases {
+    font-weight: bolder;
+}
+
+/* Contact */
+
+#contact {
+    background-color: var(--background-white);
+}
+
+#contact .content {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: start;
+    margin: auto;
+    padding: 2rem;
+    margin-bottom: 0;
+}
+
+#contact .content h1 {
+    font-family: 'Ginto Nord Medium', sans-serif;
+    font-size: 3em;
+}
+
+#contact .content input, #contact .content textarea {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 1.3em;
+    padding: .5em;
+    border: solid 3px black;
+    margin-bottom: 10px;
+}
+
+#contact .content input:focus, #contact .content textarea:focus {
+    outline: none;
+}
+
+#contact .content textarea {
+    resize: none;
+    height: 15ch;
+}
+
+#contact .content button {
+    font-family: 'Ubuntu Mono', sans-serif;
+    font-size: 1.3em;
+    padding: .5em;
+    border: solid 4px black;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+#contact .content button:hover {
+    background-color: var(--background-white);
+    color: black;
+}
+
+#contact .content .feedback {
+    font-family: 'Ubuntu Mono', monospace;
+    margin-top: 0;
+    margin-bottom: 3%;
+    font-size: 1em;
+}
+
+#contact .content .feedback .success {
+    color: green;
+}
+
+#contact .content .feedback .error {
+    color: red;
+}
+
+/* Footer */
+
+#footer {
+    background-color: var(--background-white);
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 3px dotted black;
+    font-family: 'Ubuntu', sans-serif;
+}
